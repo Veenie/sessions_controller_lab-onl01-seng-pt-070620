@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
   
   def create
-    session[:name] = params[:name]
+    if session[:name] == nil params[:name]
     redirect_to '/'
   end
   
